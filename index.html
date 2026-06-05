@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./icon-192.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="theme-color" content="#08060c" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ecclesia Studio — console de projection pour la louange." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <title>Ecclesia Studio</title>
+    <script type="module" crossorigin src="./assets/index-DNBTNZY8.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C_clJndO.css">
+  </head>
+  <body>
+    <!-- Force le chargement du subset Latin Extended (œ, Œ, æ, Æ, ç et accents
+         complets) sur toutes les polices de projection au boot. Sans ça, Google
+         Fonts ne charge le sous-fichier latin-ext que si la page initiale
+         contient ces caracteres ; or notre texte est dynamique (charge depuis
+         Supabase apres mount), trop tard pour declencher le download. Cette
+         astuce du span cache force le navigateur a parser ces glyphes des le
+         premier paint, donc a telecharger les bons unicode-range pour CHAQUE
+         police listee ici. -->
+    <!-- opacity:0 (et non visibility:hidden) pour rester rendu visuellement, ce
+         qui force Google Fonts a telecharger les unicode-range Latin Extended. -->
+    <span aria-hidden="true" style="position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;font-size:8px;font-family:'Instrument Serif';">œŒæÆ</span>
+    <span aria-hidden="true" style="position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;font-size:8px;font-family:'Cormorant Garamond';">œŒæÆ</span>
+    <span aria-hidden="true" style="position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;font-size:8px;font-family:'EB Garamond';">œŒæÆ</span>
+    <span aria-hidden="true" style="position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;font-size:8px;font-family:'Playfair Display';">œŒæÆ</span>
+    <span aria-hidden="true" style="position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;font-size:8px;font-family:'Lora';">œŒæÆ</span>
+    <span aria-hidden="true" style="position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;font-size:8px;font-family:'DM Serif Display';">œŒæÆ</span>
+    <span aria-hidden="true" style="position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;font-size:8px;font-family:'Inter';">œŒæÆ</span>
+    <div id="root"></div>
+  </body>
+</html>

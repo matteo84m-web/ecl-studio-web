@@ -1,0 +1,13 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e5b365" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#e5b365" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#0e0a14"/>
+  <rect width="512" height="512" rx="96" fill="url(#glow)"/>
+  <text x="50%" y="56%" text-anchor="middle" dominant-baseline="middle"
+        font-family="'Cormorant Garamond','Cormorant','Garamond','Georgia',serif"
+        font-size="380" font-style="italic" font-weight="400" fill="#e5b365">S</text>
+</svg>
